@@ -3,6 +3,7 @@ import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import InfotainmentPlayer from "../InfotainmentPlayer/InfotainmentPlayer";
 import BusControls from "../BusControls/BusControls";
 import { playlistData } from "../../data/playlist";
+import busBg from "../../assets/buss.png";
 import "./BusDashboard.css";
 
 const BusDashboard = () => {
@@ -35,9 +36,9 @@ const BusDashboard = () => {
 
   return (
     <main className="bus-dashboard-main">
-      {/* Background Cockpit Image */}
+      {/* Background Cockpit Image imported properly for Vite build */}
       <img
-        src="/src/assets/buss.png"
+        src={busBg}
         alt="Bus Wala Cockpit Dashboard"
         className="bus-background-img"
       />
