@@ -1,0 +1,114 @@
+.splash-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0b0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.splash-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.splash-overlay {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(10, 11, 14, 0.4) 0%, rgba(10, 11, 14, 0.85) 100%);
+}
+
+.splash-card {
+  background: rgba(22, 23, 27, 0.88);
+  border: 2px solid #f5b72b;
+  border-radius: 24px;
+  padding: 36px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 0 30px rgba(245, 183, 43, 0.3), 0 20px 50px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  animation: splashFadeIn 0.8s ease-out;
+}
+
+@keyframes splashFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.splash-bus-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #f5b72b;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 0 20px rgba(245, 183, 43, 0.6);
+}
+
+.splash-title {
+  font-family: 'Mukta', 'Segoe UI', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #f5b72b;
+  letter-spacing: 4px;
+  margin: 0;
+  text-shadow: 0 0 12px rgba(245, 183, 43, 0.8);
+}
+
+.splash-subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #d1d5db;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.splash-enter-btn {
+  background: linear-gradient(135deg, #f5b72b, #ffc83b);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(245, 183, 43, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.splash-enter-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 25px rgba(245, 183, 43, 0.7);
+}
+
+.enter-icon {
+  font-size: 12px;
+}
