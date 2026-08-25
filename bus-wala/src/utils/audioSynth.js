@@ -209,6 +209,55 @@ class BusAudioSynth {
     osc.start(now);
     osc.stop(now + 0.045);
   }
+
+  // Fallback Web Audio Synthesizer for missing or failed audio files
+  startSynthMusic(volume = 0.5) {
+    this.init();
+    if (!this.ctx) return;
+    this.stopSynthMusic();
+
+    const notes = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25]; // C major pentatonic
+    let noteIdx = 0;
+
+    this.synthGain = this.ctx.createGain();
+    this.synthGain.gain.setValueAtTime(volume * 0.2, this.ctx.currentTime);
+    this.synthGain.connect(this.ctx.destination);
+
+    this.synthInterval = setInterval(() => {
+      if (!this.ctx || this.ctx.state === "suspended") return;
+      const now = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const oscGain = this.ctx.createGain();
+
+      const freq = notes[noteIdx % notes.length];
+      noteIdx = (noteIdx + 1) % notes.length;
+
+      osc.type = "triangle";
+      osc.frequency.setValueAtTime(freq, now);
+
+      oscGain.gain.setValueAtTime(0.12 * volume, now);
+      oscGain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+
+      osc.connect(oscGain);
+      oscGain.connect(this.synthGain || this.ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 0.38);
+    }, 400);
+  }
+
+  setSynthVolume(volume) {
+    if (this.synthGain && this.ctx) {
+      this.synthGain.gain.setValueAtTime(volume * 0.2, this.ctx.currentTime);
+    }
+  }
+
+  stopSynthMusic() {
+    if (this.synthInterval) {
+      clearInterval(this.synthInterval);
+      this.synthInterval = null;
+    }
+  }
 }
 
 export const busSynth = new BusAudioSynth();

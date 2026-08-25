@@ -3,6 +3,7 @@ import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import InfotainmentPlayer from "../InfotainmentPlayer/InfotainmentPlayer";
 import BusControls from "../BusControls/BusControls";
 import { playlistData } from "../../data/playlist";
+import { busSynth } from "../../utils/audioSynth";
 import busBg from "../../assets/buss.png";
 import "./BusDashboard.css";
 
@@ -19,20 +20,47 @@ const BusDashboard = () => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
     }
+    busSynth.setSynthVolume(volume);
   }, [volume]);
 
-  // Play audio when currentSongIndex or isPlaying changes
+  // Handle play/pause and song changes cleanly with fallback synth audio
   useEffect(() => {
-    if (!audioRef.current) return;
-
-    audioRef.current.load();
+    const audio = audioRef.current;
+    if (!audio) return;
 
     if (isPlaying) {
-      audioRef.current.play().catch((err) => {
-        console.log("Audio play error:", err);
-      });
+      const audioSource = activeSong?.src ? encodeURI(activeSong.src) : "";
+      
+      const playAudio = () => {
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              busSynth.stopSynthMusic();
+            })
+            .catch((err) => {
+              console.warn("Audio playback failed, starting Web Audio synth fallback:", err.message);
+              busSynth.startSynthMusic(volume);
+            });
+        }
+      };
+
+      if (audio.getAttribute("src") !== audioSource) {
+        audio.src = audioSource;
+        audio.load();
+      }
+      playAudio();
+    } else {
+      audio.pause();
+      busSynth.stopSynthMusic();
     }
-  }, [currentSongIndex]);
+  }, [currentSongIndex, isPlaying, activeSong]);
+
+  const handleAudioError = () => {
+    if (isPlaying) {
+      busSynth.startSynthMusic(volume);
+    }
+  };
 
   return (
     <main className="bus-dashboard-main">
@@ -44,7 +72,11 @@ const BusDashboard = () => {
       />
 
       {/* Invisible HTML Audio Element */}
-      <audio ref={audioRef} src={activeSong.src} />
+      <audio
+        ref={audioRef}
+        src={activeSong?.src ? encodeURI(activeSong.src) : ""}
+        onError={handleAudioError}
+      />
 
       {/* Top Windshield Signboard & Clock */}
       <HeaderBanner />

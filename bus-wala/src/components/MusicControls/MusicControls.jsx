@@ -3,14 +3,14 @@ import "./MusicControls.css";
 
 const songs = [
   {
-    title: "Bhout Jatate Ho Chah Humse",
+    title: "Bahut Jatate Ho Chah Humse",
     artist: "Lucky Ali",
-    src: "audio/Bahut Jatate Ho Chah Humse(KoshalWorld.Com).mp3",
+    src: "/audio/Bahut Jatate Ho Chah Humse(KoshalWorld.Com).mp3",
   },
   {
-    title: "Ilahi",
+    title: "Main Agar Saamne",
     artist: "Arijit Singh",
-    src: "/audio/ilahi.mp3",
+    src: "/audio/Main Agar Saamne Raaz 128 Kbps.mp3",
   },
 ];
 

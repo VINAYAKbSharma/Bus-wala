@@ -51,14 +51,7 @@ const BusControls = ({
 
   const handleTogglePlay = () => {
     busSynth.playClick();
-    if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      audioRef.current.play().catch(() => {});
-      setIsPlaying(true);
-    }
+    setIsPlaying((prev) => !prev);
   };
 
   const handleNext = () => {
