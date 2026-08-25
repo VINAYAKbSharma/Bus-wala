@@ -23,33 +23,26 @@ const BusDashboard = () => {
     busSynth.setSynthVolume(volume);
   }, [volume]);
 
-  // Handle play/pause and song changes cleanly with fallback synth audio
+  // Handle play/pause and song changes cleanly
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
     if (isPlaying) {
-      const audioSource = activeSong?.src ? encodeURI(activeSong.src) : "";
-      
-      const playAudio = () => {
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              busSynth.stopSynthMusic();
-            })
-            .catch((err) => {
-              console.warn("Audio playback failed, starting Web Audio synth fallback:", err.message);
-              busSynth.startSynthMusic(volume);
-            });
-        }
-      };
-
-      if (audio.getAttribute("src") !== audioSource) {
-        audio.src = audioSource;
-        audio.load();
+      if (activeSong?.src) {
+        audio.src = activeSong.src;
       }
-      playAudio();
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            busSynth.stopSynthMusic();
+          })
+          .catch((err) => {
+            console.warn("Audio playback notice:", err.message);
+            busSynth.startSynthMusic(volume);
+          });
+      }
     } else {
       audio.pause();
       busSynth.stopSynthMusic();
@@ -74,7 +67,7 @@ const BusDashboard = () => {
       {/* Invisible HTML Audio Element */}
       <audio
         ref={audioRef}
-        src={activeSong?.src ? encodeURI(activeSong.src) : ""}
+        src={activeSong?.src || ""}
         onError={handleAudioError}
       />
 

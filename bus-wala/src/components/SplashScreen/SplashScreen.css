@@ -112,3 +112,28 @@
 .enter-icon {
   font-size: 12px;
 }
+
+@media (max-width: 600px) {
+  .splash-card {
+    padding: 24px 20px;
+    width: 90vw;
+    border-radius: 18px;
+  }
+  .splash-bus-badge {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+  }
+  .splash-title {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+  .splash-subtitle {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .splash-enter-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}

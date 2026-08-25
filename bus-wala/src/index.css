@@ -16,12 +16,20 @@
 }
 
 html, body, #root {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
   background-color: var(--bg-dark);
   font-family: var(--sans);
   color: #fff;
+}
+
+@media (max-width: 1024px) {
+  html, body, #root {
+    overflow-y: auto;
+    height: auto;
+  }
 }
 
 button {
@@ -30,4 +38,5 @@ button {
   outline: none;
   background: none;
   font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
 }

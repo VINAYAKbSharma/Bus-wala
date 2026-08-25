@@ -1,6 +1,7 @@
 .bus-dashboard-main {
   position: relative;
-  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
   height: 100vh;
   overflow: hidden;
   background-color: #0b0c10;
@@ -19,4 +20,24 @@
   display: block;
   z-index: 1;
   filter: brightness(0.96) contrast(1.04);
+}
+
+@media (max-width: 1024px) {
+  .bus-dashboard-main {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px 10px 40px;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bus-background-img {
+    position: fixed;
+    height: 100vh;
+    opacity: 0.35;
+  }
 }

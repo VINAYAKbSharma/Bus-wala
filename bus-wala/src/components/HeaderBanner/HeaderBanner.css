@@ -110,18 +110,67 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .header-banner-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
   .bus-speaker {
     display: none;
   }
   .main-signboard {
     min-width: auto;
     padding: 4px 16px;
+    flex: 1;
+    max-width: 320px;
   }
   .signboard-hindi {
     font-size: 20px;
+    letter-spacing: 2px;
   }
   .digital-clock {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-banner-container {
+    gap: 6px;
+  }
+  .header-icon-box {
+    height: 38px;
+    padding: 0 10px;
+  }
+  .music-box {
+    width: 42px;
+    padding: 0;
+    font-size: 15px;
+  }
+  .main-signboard {
+    padding: 4px 10px;
+    max-width: 220px;
+  }
+  .sign-bus-icon {
+    font-size: 16px;
+  }
+  .signboard-hindi {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+  .signboard-slogan {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .digital-clock {
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 }

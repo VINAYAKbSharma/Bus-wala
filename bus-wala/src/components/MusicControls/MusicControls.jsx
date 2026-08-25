@@ -5,12 +5,12 @@ const songs = [
   {
     title: "Bahut Jatate Ho Chah Humse",
     artist: "Lucky Ali",
-    src: "/audio/Bahut Jatate Ho Chah Humse(KoshalWorld.Com).mp3",
+    src: "/audio/bahut_jatate_ho.mp3",
   },
   {
     title: "Main Agar Saamne",
     artist: "Arijit Singh",
-    src: "/audio/Main Agar Saamne Raaz 128 Kbps.mp3",
+    src: "/audio/main_agar_saamne.mp3",
   },
 ];
 
