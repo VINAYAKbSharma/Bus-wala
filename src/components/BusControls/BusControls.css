@@ -8,37 +8,7 @@
   z-index: 20;
 }
 
-/* DEVOTIONAL SHRINE BOARD ("अपना सफर मंगलमय हो") */
-.mangalmay-board {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(4% + 272px);
-  background: rgba(15, 17, 23, 0.94);
-  border: 2px solid #5a4010;
-  border-radius: 8px;
-  padding: 5px 22px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 0 14px rgba(245, 183, 43, 0.4), inset 0 0 6px rgba(0, 0, 0, 0.9);
-  pointer-events: auto;
-  z-index: 26;
-}
 
-.shrine-text {
-  font-family: 'Mukta', 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #f5b72b;
-  letter-spacing: 2.5px;
-  text-shadow: 0 0 8px rgba(245, 183, 43, 0.8);
-}
-
-.shrine-sparkle {
-  color: #f5b72b;
-  font-size: 12px;
-}
 
 /* LEFT PHYSICAL CONSOLE PANEL - ALIGNED LEVEL WITH PLAYER & PLAYLIST CARDS */
 .left-console-panel {

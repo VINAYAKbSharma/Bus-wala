@@ -1,11 +1,11 @@
 .infotainment-container {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 3.5%;
   bottom: 4.5%;
+  transform: none;
   display: flex;
   align-items: flex-end;
-  gap: 20px;
+  gap: 16px;
   z-index: 25;
   pointer-events: auto;
 }

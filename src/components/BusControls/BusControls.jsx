@@ -94,12 +94,7 @@ const BusControls = ({
 
   return (
     <div className="bus-controls-layer">
-      {/* ILLUMINATED DEVOTIONAL SHRINE BOARD */}
-      <div className="mangalmay-board">
-        <span className="shrine-sparkle">✦</span>
-        <span className="shrine-text">अपना सफर मंगलमय हो</span>
-        <span className="shrine-sparkle">✦</span>
-      </div>
+
 
 
 
