@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import InfotainmentPlayer from "../InfotainmentPlayer/InfotainmentPlayer";
 import BusControls from "../BusControls/BusControls";
+import MobileNightBusBg from "../MobileNightBusBg/MobileNightBusBg";
 import { playlistData } from "../../data/playlist";
 import { busSynth } from "../../utils/audioSynth";
 import busBg from "../../assets/buss.png";
@@ -57,12 +58,15 @@ const BusDashboard = () => {
 
   return (
     <main className="bus-dashboard-main">
-      {/* Background Cockpit Image imported properly for Vite build */}
+      {/* Background Cockpit Image imported properly for Vite build (Desktop) */}
       <img
         src={busBg}
         alt="Bus Wala Cockpit Dashboard"
         className="bus-background-img"
       />
+
+      {/* Running Night Bus Driver Perspective Video Background (Mobile Only) */}
+      <MobileNightBusBg />
 
       {/* Invisible HTML Audio Element */}
       <audio
