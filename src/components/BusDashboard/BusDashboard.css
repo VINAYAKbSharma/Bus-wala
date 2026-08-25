@@ -38,24 +38,16 @@
   z-index: 2;
 }
 
-@media (max-width: 1024px) {
+/* GAME-STYLE AUTOMATIC LANDSCAPE ROTATION FOR PORTRAIT MOBILE SCREENS */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
   .bus-dashboard-main {
-    width: 100vw;
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 14px 12px 48px;
-    gap: 16px;
-    justify-content: flex-start;
-    background: #07080c;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .bus-background-img {
-    position: fixed;
-    height: 100vh;
-    opacity: 0.22;
-    filter: brightness(0.6) blur(2px);
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vh !important;
+    height: 100vw !important;
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+    transform-origin: center center !important;
+    overflow: hidden !important;
   }
 }
