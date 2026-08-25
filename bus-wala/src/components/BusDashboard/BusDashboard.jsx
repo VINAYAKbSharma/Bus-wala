@@ -29,7 +29,7 @@ const BusDashboard = () => {
     if (!audio) return;
 
     if (isPlaying) {
-      if (activeSong?.src) {
+      if (activeSong?.src && audio.getAttribute("src") !== activeSong.src) {
         audio.src = activeSong.src;
       }
       const playPromise = audio.play();
@@ -47,7 +47,7 @@ const BusDashboard = () => {
       audio.pause();
       busSynth.stopSynthMusic();
     }
-  }, [currentSongIndex, isPlaying, activeSong]);
+  }, [currentSongIndex, isPlaying, activeSong, volume]);
 
   const handleAudioError = () => {
     if (isPlaying) {

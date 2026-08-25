@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   FaPlay, 
   FaPause, 
@@ -19,7 +19,6 @@ const InfotainmentPlayer = ({
   isPlaying,
   setIsPlaying,
   audioRef,
-  volume
 }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -42,7 +41,8 @@ const InfotainmentPlayer = ({
     };
 
     const handleEnded = () => {
-      handleNext();
+      setCurrentSongIndex((prev) => (prev === playlist.length - 1 ? 0 : prev + 1));
+      setIsPlaying(true);
     };
 
     audio.addEventListener("timeupdate", handleTimeUpdate);

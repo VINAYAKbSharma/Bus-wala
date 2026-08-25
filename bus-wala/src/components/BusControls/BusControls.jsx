@@ -4,8 +4,6 @@ import {
   FaPause, 
   FaPlay, 
   FaStepForward, 
-  FaVolumeUp, 
-  FaVolumeMute,
   FaBell, 
   FaExchangeAlt, 
   FaExclamationTriangle,
@@ -17,12 +15,10 @@ import "./BusControls.css";
 const BusControls = ({
   isPlaying,
   setIsPlaying,
-  currentSongIndex,
   setCurrentSongIndex,
   playlistLength,
   volume,
   setVolume,
-  audioRef
 }) => {
   const [doorOpen, setDoorOpen] = useState(false);
   const [indicatorActive, setIndicatorActive] = useState(false);

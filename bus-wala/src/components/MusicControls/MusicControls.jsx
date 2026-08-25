@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import "./MusicControls.css";
 
+const BASE = import.meta.env.BASE_URL || "/";
+const getAudioUrl = (filename) => `${BASE}audio/${filename}`.replace(/\/+/g, "/");
+
 const songs = [
   {
     title: "Bahut Jatate Ho Chah Humse",
     artist: "Lucky Ali",
-    src: "/audio/bahut_jatate_ho.mp3",
+    src: getAudioUrl("bahut_jatate_ho.mp3"),
   },
   {
     title: "Main Agar Saamne",
     artist: "Arijit Singh",
-    src: "/audio/main_agar_saamne.mp3",
+    src: getAudioUrl("main_agar_saamne.mp3"),
   },
 ];
 
