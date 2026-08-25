@@ -21,7 +21,7 @@ const SplashScreen = ({ onComplete }) => {
         preload="auto"
       >
         <source
-          src={`${import.meta.env.BASE_URL || "/"}videos/bus-wala-animated-splash.mp4`.replace(/\/+/g, "/")}
+          src={`${(import.meta.env.BASE_URL || "/").endsWith("/") ? (import.meta.env.BASE_URL || "/") : `${import.meta.env.BASE_URL}/`}videos/bus-wala-animated-splash.mp4`}
           type="video/mp4"
         />
       </video>

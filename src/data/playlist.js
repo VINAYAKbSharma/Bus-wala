@@ -1,5 +1,8 @@
 const BASE = import.meta.env.BASE_URL || "/";
-const getAudioUrl = (filename) => `${BASE}audio/${filename}`.replace(/\/+/g, "/");
+const getAudioUrl = (filename) => {
+  const base = BASE.endsWith("/") ? BASE : `${BASE}/`;
+  return `${base}audio/${filename}`;
+};
 
 export const playlistData = [
   {
