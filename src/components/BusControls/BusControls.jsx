@@ -188,19 +188,7 @@ const BusControls = ({
         </div>
       </div>
 
-      {/* CENTER BIG RED HORN BUTTON */}
-      <div className="horn-button-wrapper">
-        <button 
-          className={`big-red-horn ${hornPressed ? "pressed" : ""}`} 
-          onClick={handleHorn}
-          title="Press Horn"
-        >
-          <div className="horn-inner">
-            <span className="horn-symbol">📢</span>
-            <span className="horn-text">HORN</span>
-          </div>
-        </button>
-      </div>
+
 
       {/* RIGHT SPEEDOMETER & DASHBOARD INSTRUMENT CLUSTER OVERLAY */}
       <div className="dashboard-cluster-overlay">
