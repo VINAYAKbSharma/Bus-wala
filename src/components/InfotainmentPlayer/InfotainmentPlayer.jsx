@@ -7,7 +7,9 @@ import {
   FaHeart, 
   FaRegHeart, 
   FaMusic, 
-  FaBars 
+  FaBars,
+  FaVolumeUp,
+  FaVolumeMute
 } from "react-icons/fa";
 import { busSynth } from "../../utils/audioSynth";
 import "./InfotainmentPlayer.css";
@@ -19,6 +21,8 @@ const InfotainmentPlayer = ({
   isPlaying,
   setIsPlaying,
   audioRef,
+  volume = 0.8,
+  setVolume,
 }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -162,7 +166,7 @@ const InfotainmentPlayer = ({
           />
         </div>
 
-        {/* Player Controls */}
+        {/* Player Controls & Volume */}
         <div className="player-controls-row">
           <button className="ctrl-btn prev-btn" onClick={handlePrev} title="Previous">
             <FaStepBackward />
@@ -175,6 +179,26 @@ const InfotainmentPlayer = ({
           <button className="ctrl-btn next-btn" onClick={handleNext} title="Next">
             <FaStepForward />
           </button>
+
+          {setVolume && (
+            <div className="inline-volume-control" title="Adjust Volume">
+              <button 
+                className="volume-toggle-btn"
+                onClick={() => setVolume(volume > 0 ? 0 : 0.8)}
+              >
+                {volume === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+              </button>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.02"
+                value={volume}
+                onChange={(e) => setVolume(parseFloat(e.target.value))}
+                className="inline-volume-slider"
+              />
+            </div>
+          )}
         </div>
       </div>
 

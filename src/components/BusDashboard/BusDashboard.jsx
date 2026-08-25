@@ -83,6 +83,7 @@ const BusDashboard = () => {
         setIsPlaying={setIsPlaying}
         audioRef={audioRef}
         volume={volume}
+        setVolume={setVolume}
       />
 
       {/* Physical Dashboard Controls & Gauges */}

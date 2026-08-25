@@ -336,26 +336,18 @@
 /* INVISIBLE STEERING WHEEL HORN CLICK HOTSPOT (COVERS THE REAL STEERING WHEEL IMAGE) */
 .steering-hotspot {
   position: absolute;
-  right: 3%;
-  bottom: 2%;
-  width: 270px;
-  height: 270px;
+  right: 12%;
+  bottom: 8%;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   cursor: pointer;
   pointer-events: auto;
-  z-index: 28;
+  z-index: 35;
 }
 
 /* RESPONSIVE LAYOUT FOR MOBILE & TABLET */
 @media (max-width: 1250px) {
-  .left-console-panel {
-    position: absolute;
-    left: auto;
-    right: 2%;
-    bottom: 3.5%;
-    width: 220px;
-    height: 250px;
-  }
   .mangalmay-board {
     bottom: auto;
     top: 54px;
@@ -366,32 +358,9 @@
 }
 
 @media (max-width: 900px) {
-  .left-console-panel {
-    right: 2%;
-    bottom: 2%;
-    gap: 6px;
-    width: 200px;
-    height: auto;
-  }
-  .physical-media-row, .volume-dial-container, .bus-switches-row {
-    padding: 4px;
-  }
-  .dash-btn {
-    height: 36px;
-  }
-  .dash-btn-label {
-    font-size: 7px;
-  }
-  .switch-icon-box {
-    height: 18px;
-    font-size: 10px;
-  }
-  .switch-label {
-    font-size: 6px;
-  }
   .steering-hotspot {
-    right: 2%;
-    bottom: 2%;
+    right: 5%;
+    bottom: 5%;
     width: 180px;
     height: 180px;
   }
@@ -405,14 +374,9 @@
     font-size: 11px;
     letter-spacing: 1px;
   }
-  .left-console-panel {
-    right: 1.5%;
-    bottom: 1.5%;
-    width: 180px;
-  }
   .steering-hotspot {
-    right: 1%;
-    bottom: 1%;
+    right: 2%;
+    bottom: 2%;
     width: 140px;
     height: 140px;
   }
