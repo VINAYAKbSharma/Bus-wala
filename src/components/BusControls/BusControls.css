@@ -11,22 +11,23 @@
 /* DEVOTIONAL SHRINE BOARD ("अपना सफर मंगलमय हो") */
 .mangalmay-board {
   position: absolute;
-  left: 20.8%;
-  bottom: 31.8%;
-  background: #15161b;
+  left: 3.5%;
+  bottom: 43%;
+  background: rgba(21, 22, 27, 0.94);
   border: 2px solid #5a4010;
-  border-radius: 6px;
-  padding: 4px 18px;
+  border-radius: 8px;
+  padding: 4px 16px;
   display: flex;
   align-items: center;
   gap: 10px;
   box-shadow: 0 0 12px rgba(245, 183, 43, 0.4), inset 0 0 6px rgba(0, 0, 0, 0.9);
   pointer-events: auto;
+  z-index: 24;
 }
 
 .shrine-text {
   font-family: 'Mukta', 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: #f5b72b;
   letter-spacing: 2px;
@@ -41,83 +42,83 @@
 /* LEFT PHYSICAL CONSOLE PANEL */
 .left-console-panel {
   position: absolute;
-  left: 6.8%;
-  bottom: 3.5%;
+  left: 45.5%;
+  bottom: 4.5%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   pointer-events: auto;
-  z-index: 22;
+  z-index: 24;
 }
 
 /* Physical Media Controls (PREV, PLAY/PAUSE, NEXT) */
 .physical-media-row {
   display: flex;
-  gap: 8px;
-  background: #1c1d24;
-  padding: 8px;
-  border-radius: 12px;
-  border: 2px solid #2d303a;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05), 0 8px 16px rgba(0, 0, 0, 0.7);
+  gap: 6px;
+  background: rgba(28, 29, 36, 0.92);
+  padding: 6px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(245, 183, 43, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
 }
 
 .dash-btn {
   background: linear-gradient(180deg, #323542 0%, #1f2129 100%);
   border: 1px solid #454a5a;
-  border-radius: 8px;
-  padding: 10px 14px;
+  border-radius: 6px;
+  padding: 6px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  width: 72px;
-  height: 54px;
+  gap: 2px;
+  width: 58px;
+  height: 44px;
   color: #d1d5db;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   transition: transform 0.1s ease, background 0.15s ease;
+  cursor: pointer;
 }
 
 .dash-btn:active {
   transform: translateY(2px);
   background: linear-gradient(180deg, #1f2129 0%, #15161b 100%);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), inset 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .dash-btn.active-media {
   border-color: #f5b72b;
   color: #f5b72b;
-  box-shadow: 0 0 10px rgba(245, 183, 43, 0.3);
+  box-shadow: 0 0 8px rgba(245, 183, 43, 0.4);
 }
 
 .dash-icon {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .dash-btn-label {
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 /* Volume Knob Panel */
 .volume-dial-container {
-  background: #1c1d24;
-  border: 2px solid #2d303a;
-  border-radius: 12px;
-  padding: 8px 12px;
+  background: rgba(28, 29, 36, 0.92);
+  border: 1.5px solid rgba(245, 183, 43, 0.3);
+  border-radius: 10px;
+  padding: 6px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  gap: 2px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
 }
 
 .vol-header {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   color: #f5b72b;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 }
 
 .knob-wrapper {
@@ -125,37 +126,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
 }
 
 .vol-minus, .vol-plus {
   font-weight: 800;
   color: #9ca3af;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .rotary-knob {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: radial-gradient(circle, #3d4150 0%, #1b1c23 100%);
-  border: 3px solid #4f5466;
+  border: 2px solid #4f5466;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
   transition: transform 0.1s linear;
 }
 
 .knob-indicator-dot {
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 50%;
   transform: translateX(-50%);
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: #f5b72b;
-  box-shadow: 0 0 6px #f5b72b;
+  box-shadow: 0 0 5px #f5b72b;
 }
 
 .invisible-vol-slider {
@@ -171,24 +172,25 @@
 /* Bus Switches Row (DOOR, BELL, INDICATOR, BRAKE) */
 .bus-switches-row {
   display: flex;
-  gap: 6px;
-  background: #1c1d24;
-  padding: 8px;
-  border-radius: 12px;
-  border: 2px solid #2d303a;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  gap: 5px;
+  background: rgba(28, 29, 36, 0.92);
+  padding: 6px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(245, 183, 43, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
 }
 
 .switch-btn {
   background: #252732;
   border: 1px solid #3d4152;
-  border-radius: 8px;
-  padding: 6px 4px;
+  border-radius: 6px;
+  padding: 4px 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  width: 54px;
+  gap: 3px;
+  width: 44px;
+  cursor: pointer;
   transition: transform 0.1s ease, border-color 0.2s ease;
 }
 
@@ -197,13 +199,13 @@
 }
 
 .switch-icon-box {
-  width: 32px;
-  height: 28px;
-  border-radius: 6px;
+  width: 26px;
+  height: 22px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -223,10 +225,10 @@
 }
 
 .switch-label {
-  font-size: 8px;
+  font-size: 7.5px;
   font-weight: 800;
   color: #d1d5db;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
 }
 
 .switched-on {
@@ -243,38 +245,38 @@
   100% { border-color: #2ecc71; box-shadow: 0 0 12px #2ecc71; }
 }
 
-/* CENTER BIG RED HORN BUTTON */
+/* HORN BUTTON PLACED EXACTLY ON THE STEERING WHEEL HORN CAP */
 .horn-button-wrapper {
   position: absolute;
-  left: 48.2%;
-  bottom: 23.5%;
-  transform: translateX(-50%);
+  right: 17.5%;
+  bottom: 16.5%;
   pointer-events: auto;
-  z-index: 25;
+  z-index: 28;
 }
 
 .big-red-horn {
-  width: 105px;
-  height: 105px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #ff4d4d 0%, #b30000 70%, #660000 100%);
-  border: 5px solid #d63031;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(230, 57, 70, 0.4), inset 0 4px 6px rgba(255, 255, 255, 0.4);
+  background: radial-gradient(circle at 35% 35%, #ff3b3b 0%, #b30000 70%, #590000 100%);
+  border: 4px solid #f5b72b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9), 0 0 18px rgba(245, 183, 43, 0.4), inset 0 3px 5px rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .big-red-horn:hover {
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9), 0 0 25px rgba(230, 57, 70, 0.7);
-  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9), 0 0 24px rgba(245, 183, 43, 0.7);
+  transform: scale(1.05);
 }
 
 .big-red-horn.pressed, .big-red-horn:active {
-  transform: scale(0.95);
-  background: radial-gradient(circle at 50% 50%, #cc0000 0%, #800000 100%);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9), inset 0 4px 8px rgba(0, 0, 0, 0.8);
+  transform: scale(0.93);
+  background: radial-gradient(circle at 50% 50%, #cc0000 0%, #730000 100%);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), inset 0 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 .horn-inner {
@@ -282,37 +284,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 1px;
 }
 
 .horn-symbol {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .horn-text {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 /* RIGHT SPEEDOMETER & CLUSTER OVERLAY */
 .dashboard-cluster-overlay {
   position: absolute;
-  right: 18%;
-  bottom: 23%;
-  width: 220px;
-  height: 120px;
+  right: 29%;
+  bottom: 22%;
+  width: 180px;
+  height: 100px;
   pointer-events: auto;
+  z-index: 22;
 }
 
 .gauge-housing {
   position: absolute;
-  left: 20px;
-  top: 10px;
-  width: 90px;
-  height: 90px;
+  left: 10px;
+  top: 5px;
+  width: 75px;
+  height: 75px;
 }
 
 .gauge-dial {
@@ -326,7 +329,7 @@
   bottom: 50%;
   left: 50%;
   width: 3px;
-  height: 38px;
+  height: 32px;
   background: linear-gradient(180deg, #ff3333 0%, #cc0000 100%);
   transform-origin: bottom center;
   transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -339,8 +342,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #111;
   border: 2px solid #555;
@@ -349,13 +352,13 @@
 .cluster-lights {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 5px;
   display: flex;
-  gap: 6px;
+  gap: 4px;
 }
 
 .cluster-light {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.2;
   transition: opacity 0.2s ease;
 }
@@ -375,201 +378,104 @@
 
 .steering-hotspot {
   position: absolute;
-  right: -80px;
-  bottom: -90px;
-  width: 260px;
-  height: 260px;
+  right: 12%;
+  bottom: 10%;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   cursor: pointer;
+  pointer-events: auto;
+  z-index: 26;
 }
 
-@media (max-width: 1024px) {
-  .bus-controls-layer {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    max-width: 540px;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    pointer-events: auto;
-    z-index: 20;
-  }
-
-  .mangalmay-board {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    margin: 0 auto;
-    border-radius: 8px;
-    padding: 4px 16px;
-    box-shadow: 0 0 10px rgba(245, 183, 43, 0.4);
-  }
-
-  .shrine-text {
-    font-size: 14px;
-    letter-spacing: 1.5px;
-  }
-
+/* RESPONSIVE LAYOUT FOR MOBILE & TABLET ("Look similar for mobile and desktop") */
+@media (max-width: 1200px) {
   .left-console-panel {
-    position: relative;
     left: auto;
+    right: 2%;
+    bottom: 3.5%;
+  }
+  .mangalmay-board {
+    left: 2%;
     bottom: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    top: 60px;
   }
-
-  .physical-media-row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    box-sizing: border-box;
-  }
-
-  .dash-btn {
-    flex: 1;
-    max-width: 120px;
-    height: 50px;
-    padding: 6px;
-  }
-
-  .dash-icon {
-    font-size: 15px;
-  }
-
-  .dash-btn-label {
-    font-size: 9px;
-  }
-
-  .volume-dial-container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .bus-switches-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 6px;
-    box-sizing: border-box;
-  }
-
-  .switch-btn {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-    padding: 6px 2px;
-    gap: 4px;
-  }
-
-  .switch-icon-box {
-    width: 100%;
-    height: 30px;
-    font-size: 13px;
-  }
-
-  .switch-label {
-    font-size: 8px;
-    letter-spacing: 0.3px;
-    text-align: center;
-    white-space: nowrap;
-  }
-
   .horn-button-wrapper {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    margin: 4px auto;
+    right: 12%;
+    bottom: 12%;
   }
-
-  .big-red-horn {
-    width: 95px;
-    height: 95px;
-  }
-
   .dashboard-cluster-overlay {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(28, 29, 36, 0.95);
-    border: 2px solid #2d303a;
-    border-radius: 14px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-  }
-
-  .gauge-housing {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 70px;
-    height: 70px;
-  }
-
-  .gauge-needle {
-    height: 30px;
-  }
-
-  .cluster-lights {
-    position: relative;
-    top: auto;
-    right: auto;
-    gap: 12px;
-  }
-
-  .cluster-light {
-    font-size: 18px;
-  }
-
-  .steering-hotspot {
     display: none;
   }
 }
 
-@media (max-width: 480px) {
-  .shrine-text {
-    font-size: 12px;
-    letter-spacing: 1px;
+@media (max-width: 900px) {
+  .left-console-panel {
+    right: 2%;
+    bottom: 2%;
+    gap: 6px;
   }
-
+  .physical-media-row, .volume-dial-container, .bus-switches-row {
+    padding: 4px;
+  }
+  .dash-btn {
+    width: 48px;
+    height: 38px;
+  }
+  .dash-btn-label {
+    font-size: 7px;
+  }
   .switch-btn {
-    padding: 5px 1px;
+    width: 36px;
   }
-
   .switch-icon-box {
-    height: 26px;
-    font-size: 12px;
-  }
-
-  .switch-label {
-    font-size: 7.5px;
-  }
-
-  .big-red-horn {
-    width: 85px;
-    height: 85px;
-  }
-
-  .horn-symbol {
-    font-size: 18px;
-  }
-
-  .horn-text {
+    height: 18px;
     font-size: 10px;
+  }
+  .switch-label {
+    font-size: 6.5px;
+  }
+  .horn-button-wrapper {
+    right: 6%;
+    bottom: 8%;
+  }
+  .big-red-horn {
+    width: 72px;
+    height: 72px;
+    border-width: 3px;
+  }
+  .horn-symbol {
+    font-size: 16px;
+  }
+  .horn-text {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mangalmay-board {
+    padding: 2px 10px;
+  }
+  .shrine-text {
+    font-size: 11px;
     letter-spacing: 1px;
+  }
+  .left-console-panel {
+    right: 1.5%;
+    bottom: 1.5%;
+  }
+  .horn-button-wrapper {
+    right: 4%;
+    bottom: 6%;
+  }
+  .big-red-horn {
+    width: 62px;
+    height: 62px;
+  }
+  .horn-symbol {
+    font-size: 14px;
+  }
+  .horn-text {
+    font-size: 8px;
   }
 }
