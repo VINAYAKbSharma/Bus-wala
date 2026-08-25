@@ -21,8 +21,10 @@
   object-fit: cover;
   object-position: center bottom;
   display: block;
-  z-index: 1;
-  filter: brightness(0.92) contrast(1.06);
+  z-index: 2;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  filter: brightness(0.95) contrast(1.1);
 }
 
 /* Subtle dashboard ambient vignette overlay */
