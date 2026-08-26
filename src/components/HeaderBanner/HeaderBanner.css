@@ -53,6 +53,43 @@
   padding: 0;
 }
 
+/* Listeners Box */
+.listeners-box {
+  border-color: #383c48;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.listeners-icon {
+  color: #38bdf8;
+  font-size: 16px;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6));
+}
+
+.listeners-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.listeners-count {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.5);
+}
+
+.listeners-label {
+  font-size: 8px;
+  font-weight: 800;
+  color: #9ca3af;
+  letter-spacing: 1px;
+  margin-top: 1px;
+}
+
 .clock-box {
   border-color: #383c48;
 }
@@ -108,6 +145,19 @@
   margin-top: 1px;
   opacity: 0.9;
   text-transform: uppercase;
+}
+
+.signboard-author {
+  font-size: 11px;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 1.8px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f5b72b, #38bdf8, #f5b72b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
 }
 
 @media (max-width: 900px), (max-height: 500px) {

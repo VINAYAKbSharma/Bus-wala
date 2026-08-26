@@ -34,21 +34,21 @@ export const playlistData = [
   },
   {
     id: 4,
-    title: "Yaaron",
+    title: "Ek Dilruba Hai",
     artist: "KK",
     duration: 270, // 04:30
     cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
     gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)",
-    src: getAudioUrl("bahut_jatate_ho.mp3")
+    src: getAudioUrl("Ek Dilruba Hai.mp3")
   },
   {
     id: 5,
-    title: "Pal",
+    title: "Sajan Tumse Pyaar",
     artist: "Jal",
     duration: 252, // 04:12
     cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80",
     gradient: "linear-gradient(135deg, #00c6ff, #0072ff)",
-    src: getAudioUrl("main_agar_saamne.mp3")
+    src: getAudioUrl("Sajan Tumse Pyar.mp3")
   },
   {
     id: 6,

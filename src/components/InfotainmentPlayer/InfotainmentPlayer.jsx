@@ -205,7 +205,10 @@ const InfotainmentPlayer = ({
       {/* RIGHT SCREEN: PLAYLIST DRAWER */}
       <div className="playlist-card">
         <div className="playlist-header">
-          <h3 className="playlist-title">PLAYLIST</h3>
+          <div>
+            <h3 className="playlist-title">PLAYLIST</h3>
+            <span className="playlist-author-credit">By Vinayak Sharma</span>
+          </div>
           <FaBars className="playlist-menu-icon" />
         </div>
 

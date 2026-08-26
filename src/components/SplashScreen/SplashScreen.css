@@ -85,7 +85,42 @@
   font-weight: 700;
   color: #d1d5db;
   letter-spacing: 3px;
+  margin-bottom: 4px;
+}
+
+.splash-author {
+  font-size: 13px;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f5b72b, #38bdf8, #f5b72b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.splash-listeners-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: #38bdf8;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
   margin-bottom: 12px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+.splash-listeners-icon {
+  font-size: 15px;
+  color: #38bdf8;
 }
 
 .splash-enter-btn {

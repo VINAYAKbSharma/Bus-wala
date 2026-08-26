@@ -1,8 +1,15 @@
-import { useEffect } from "react";
-import { FaBus, FaPlay } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaBus, FaPlay, FaHeadphones } from "react-icons/fa";
+import { getAndIncrementListeners } from "../../utils/listenersCounter";
 import "./SplashScreen.css";
 
 const SplashScreen = ({ onComplete }) => {
+  const [listenersCount, setListenersCount] = useState(0);
+
+  useEffect(() => {
+    setListenersCount(getAndIncrementListeners());
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       onComplete();
@@ -33,6 +40,12 @@ const SplashScreen = ({ onComplete }) => {
           </div>
           <h1 className="splash-title">बस वाला</h1>
           <p className="splash-subtitle">ENJOY THE MUSIC. ENJOY THE RIDE.</p>
+          <p className="splash-author">By Vinayak Sharma</p>
+
+          <div className="splash-listeners-badge" title="Total Website Listeners">
+            <FaHeadphones className="splash-listeners-icon" />
+            <span>{listenersCount.toLocaleString()} LISTENERS</span>
+          </div>
           
           <button className="splash-enter-btn" onClick={onComplete}>
             <FaPlay className="enter-icon" /> START RIDE

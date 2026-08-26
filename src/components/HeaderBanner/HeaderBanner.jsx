@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
-import { FaMusic, FaBus } from "react-icons/fa";
+import { FaMusic, FaBus, FaHeadphones } from "react-icons/fa";
+import { getAndIncrementListeners } from "../../utils/listenersCounter";
 import "./HeaderBanner.css";
 
 const HeaderBanner = () => {
   const [timeStr, setTimeStr] = useState("");
+  const [listenersCount, setListenersCount] = useState(0);
+
+  useEffect(() => {
+    setListenersCount(getAndIncrementListeners());
+  }, []);
 
   useEffect(() => {
     const updateTime = () => {
@@ -36,6 +42,15 @@ const HeaderBanner = () => {
         <FaMusic className="header-icon" />
       </div>
 
+      {/* Listeners Counter Display Box */}
+      <div className="header-icon-box listeners-box" title="Total Website Listeners">
+        <FaHeadphones className="header-icon listeners-icon" />
+        <div className="listeners-content">
+          <span className="listeners-count">{listenersCount.toLocaleString()}</span>
+          <span className="listeners-label">LISTENERS</span>
+        </div>
+      </div>
+
       {/* Main Bus Signboard */}
       <div className="main-signboard">
         <div className="signboard-content">
@@ -45,6 +60,7 @@ const HeaderBanner = () => {
             <FaBus className="sign-bus-icon" />
           </div>
           <p className="signboard-slogan">ENJOY THE MUSIC. ENJOY THE RIDE.</p>
+          <p className="signboard-author">By Vinayak Sharma</p>
         </div>
       </div>
 

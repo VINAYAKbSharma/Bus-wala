@@ -289,6 +289,17 @@
   letter-spacing: 1.5px;
   font-weight: 800;
   margin: 0;
+  line-height: 1.1;
+}
+
+.playlist-author-credit {
+  font-size: 9px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 1px;
+  display: block;
+  margin-top: 2px;
+  text-transform: uppercase;
 }
 
 .playlist-menu-icon {

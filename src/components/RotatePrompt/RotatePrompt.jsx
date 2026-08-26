@@ -40,6 +40,7 @@ const RotatePrompt = () => {
         <h2 className="rotate-hindi-text">
           मैंने बनाई है एक म्यूज़िक प्लेयर ऐप! देखने के लिए करिए अपने फोन को रोटेट 🔄
         </h2>
+        <p className="rotate-author">By Vinayak Sharma</p>
         <p className="rotate-english-sub">
           Please rotate your phone to landscape mode for the best bus cockpit experience.
         </p>
